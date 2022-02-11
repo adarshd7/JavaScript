@@ -1,0 +1,32 @@
+<html>
+
+<head>local storage and session storage</head>
+
+<body>
+    <p id="demo">localScore:</p>
+    <button onclick="myfun()">localcount</button>
+    <p id="demo1">sessionScore:0</p>
+    <button onclick="myfun1()">Sessioncount</button>
+</body>
+<script>
+    let i = Number(localStorage.getItem("count"));
+    document.querySelector('#demo').textContent += i;
+    function myfun() {
+        i = i + 1;
+        document.getElementById("demo").innerHTML = "localScore:" + i;
+        localStorage.setItem("count", i);
+
+
+
+    }
+    x = 0;
+    function myfun1() {
+        x = x + 1;
+        document.getElementById("demo1").innerHTML = "Sessioncount:" + x;
+        sessionStorage.setItem("count", x);
+
+    }
+
+</script>
+
+</html>
