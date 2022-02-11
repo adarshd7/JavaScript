@@ -4,7 +4,7 @@ async function getData(){
  
     });
     let promise1 = new Promise(function(resolve){
-        setTimeout(()=>resolve("end"),4001);
+        setTimeout(()=>resolve("end"),4000);
     });
 await promise;
 await promise1;
@@ -13,7 +13,6 @@ promise.then(
     result=>console.log("Email id of the user is "+result),
     
 );
-
 promise1.then(
    
     result=>console.log(result),
@@ -23,3 +22,5 @@ promise1.then(
 }
 console.log("start");
 getData();
+
+
