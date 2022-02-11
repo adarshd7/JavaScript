@@ -3,13 +3,7 @@ async function getData(){
     setTimeout(()=>resolve("skc@gmail.com"),4000);
  
     });
-<<<<<<< Updated upstream
-    let promise1 = new Promise(function(resolve){
-        setTimeout(()=>resolve("end"),4000);
-    });
-=======
     
->>>>>>> Stashed changes
 await promise;
 
 promise.then(
@@ -18,21 +12,8 @@ promise.then(
     console.log("end")}
     
 );
-<<<<<<< Updated upstream
-promise1.then(
-   
-    result=>console.log(result),
-    
-);
-=======
-
->>>>>>> Stashed changes
 
 }
 console.log("start");
 getData();
 
-<<<<<<< Updated upstream
-
-=======
->>>>>>> Stashed changes
