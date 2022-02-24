@@ -1,0 +1,89 @@
+.tables .tabletitle #title{
+
+    text-align: center;
+
+}
+
+.tabletitle #search{
+    font-size: medium;
+    width: 100%;
+    padding:5px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+}
+
+.tables{
+    
+    display: grid;
+}
+
+.booktable{
+
+    border-radius: 5px;
+    border:solid 2px grey;
+    border-spacing: 36px;
+    margin: 4px 4px 4px 4px;
+}
+
+#tableid{
+
+    font-size: 20px;
+    font-weight: 100;
+    margin-left: 15px;
+}
+
+.app .app1{
+    
+    float:left;
+    margin-right: 10px;
+    padding-right: 5px;
+}
+
+
+.booktable p{
+
+    display: inline;
+    padding-left:4px;
+    padding-bottom: 10px;
+}
+
+.FoodItems{
+
+    display: grid;
+}
+
+
+#menutitle{
+text-align: center;
+}
+
+.menutitle input{
+
+    width: 400px;
+    padding:10px;
+
+} 
+
+#searchfood{
+    font-size: medium;
+    width: 75%;
+    padding:5px;
+
+    margin-bottom: 5px;
+    margin-left: 20px;
+}
+
+.fooditem h1{
+
+font-size: 25px;
+
+}
+
+.fooditem{
+
+    border: solid 2px grey;
+    border-radius: 5px;
+    margin: 4px 4px 4px 4px;
+    padding-left:5px;
+    
+}

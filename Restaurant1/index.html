@@ -1,0 +1,238 @@
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width-device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function searchfun() {
+            let input = document.getElementById("search");
+            filter = input.value.toUpperCase();
+            let h = document.getElementsByClassName('booktable');
+            for (i = 0; i < h.length; i++) {
+                let a = h[i].getElementsByTagName('h1')[0];
+                if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                    h[i].style.display = "";
+                } else {
+                    h[i].style.display = "none";
+                }
+
+            }
+        }
+
+        function searchfun1() {
+            let input = document.getElementById("searchfood");
+            filter = input.value.toUpperCase();
+            let h = document.getElementsByClassName('fooditem');
+            for (i = 0; i < h.length; i++) {
+                let a = h[i].getElementsByTagName('h1')[0];
+                if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                    h[i].style.display = "";
+                } else {
+                    h[i].style.display = "none";
+                }
+
+            }
+        }
+
+        function searchfun2() {
+            let input = document.getElementById("searchfood");
+            filter = input.value.toUpperCase();
+            if (filter.indexOf("MAINCOURSES") > -1 || filter.indexOf("MA") > -1) {
+                var x = document.getElementsByClassName('maincourses');
+                for (i = 0; i < x.length; i++) {
+                    let a = x[i].getElementsByTagName('h1')[0];
+                    x[i].style.display = "";
+                }
+            }
+        }
+
+        function searchfun3() {
+            let input = document.getElementById("searchfood");
+            filter = input.value.toUpperCase();
+            if (filter.indexOf("DRINK") > -1 || filter.indexOf("DR") > -1) {
+                var x = document.getElementsByClassName('drinks');
+                for (i = 0; i < x.length; i++) {
+                    let a = x[i].getElementsByTagName('h1')[0];
+                    x[i].style.display = "";
+                }
+            }
+        }
+
+        function searchfun4() {
+            let input = document.getElementById("searchfood");
+            filter = input.value.toUpperCase();
+            if (filter.indexOf("DESSERT") > -1 || filter.indexOf("DE") > -1) {
+                var x = document.getElementsByClassName('desserts');
+                for (i = 0; i < x.length; i++) {
+                    let a = x[i].getElementsByTagName('h1')[0];
+                    x[i].style.display = "";
+                }
+            }
+        }
+
+        function searchfun5() {
+            let input = document.getElementById("searchfood");
+            filter = input.value.toUpperCase();
+            if (filter.indexOf("STARTER") > -1 || filter.indexOf("ST") > -1) {
+                var x = document.querySelectorAll('#starter');
+                for (i = 0; i < x.length; i++) {
+                    let a = x[i].getElementsByTagName('h1')[0];
+                    x[i].style.display = "";
+                }
+            }
+        }
+
+
+
+
+
+
+    </script>
+
+</head>
+
+<body>
+    <div class="app">
+        <div class="app1">
+            <div class="tables">
+
+                <div class="tabletitle">
+                    <h1 id="title">Tables</h1>
+                    <input id="search" type="text" onkeyup="searchfun()" placeholder="Search Table">
+                </div>
+
+                <div class="booktable" ondragover="(ev)=>ev.preventDefault()" ondrop="drop(ev)">
+                    <h1 id="tableid">Table-1</h1>
+                    <p id="table"> Rs:0 </p>
+                    <p id="item"> Total Items:0 </p>
+                </div>
+
+                <div class="booktable">
+                    <h1 id="tableid">Table-2</h1>
+                    <p> Rs:0 </p>
+                    <p> Total Items:0 </p>
+                </div>
+
+                <div class="booktable">
+                    <h1 id="tableid">Table-3</h1>
+                    <p> Rs:0 </p>
+                    <p> Total Items:0 </p>
+                </div>
+
+                <div class="booktable">
+
+                    <h1 id="tableid">Table-4</h1>
+                    <p> Rs:0 </p>
+                    <p> Total Items:0 </p>
+
+                </div>
+
+                <div class="booktable">
+                    <h1 id="tableid">Table-5</h1>
+                    <p> Rs:0 </p>
+                    <p> Total Items:0 </p>
+                </div>
+
+            </div>
+        </div>
+        <div class="app2">
+            <div class="FoodItems">
+
+                <div class="Menu">
+                    <h1 id="menutitle">Menu</h1>
+                    <input id="searchfood" type="text"
+                        onkeyup="searchfun1()||searchfun2()||searchfun3()||searchfun4()||searchfun5()"
+                        placeholder="Search Menu -by maincourses,starters">
+                </div>
+
+                <div class="fooditem maincourses" draggable="true" id="maincourse">
+                    <h1>Chicken biryani</h1>
+                    <p id="cost">200.00</p>
+                </div>
+
+                <div class="fooditem maincourses" draggable="true" id="maincourse">
+                    <h1> Mutton biryani</h1>
+                    <p>300.00</p>
+                </div>
+
+                <div class="fooditem maincourses" id="maincourse">
+                    <h1>Special Chicken biryani</h1>
+                    <p>250.00</p>
+                </div>
+
+                <div class="fooditem starters" id="starter">
+                    <h1>Chicken 65</h1>
+                    <p>150.00</p>
+                </div>
+
+                <div class="fooditem starters" id="starter">
+                    <h1>Chilli Chicken</h1>
+                    <p>150.00</p>
+                </div>
+
+                <div class="fooditem starters" id="starter">
+                    <h1>Chicken Manchuria</h1>
+                    <p>150.00</p>
+                </div>
+
+                <div class="fooditem desserts" id="dessert">
+                    <h1>Velvet Cake</h1>
+                    <p>50.00</p>
+                </div>
+
+                <div class="fooditem desserts" id="dessert">
+                    <h1>Black forest Cake</h1>
+                    <p>50.00</p>
+                </div>
+
+                <div class="fooditem desserts" id="dessert">
+                    <h1>Chocolate Ice Cream</h1>
+                    <p>100.00</p>
+                </div>
+
+                <div class="fooditem desserts" id="dessert">
+                    <h1>ButterScotch Ice Cream</h1>
+                    <p>100.00</p>
+                </div>
+
+                <div class="fooditem drinks" id="cooldrink">
+                    <h1>Ferrero Milk Shake</h1>
+                    <p>100.00</p>
+                </div>
+
+                <div class="fooditem drinks" id="cooldrink">
+                    <h1>Chocolate Shake</h1>
+                    <p>100.00</p>
+                </div>
+
+                <div class="fooditem drinks" id="cooldrink">
+                    <h1>Mojito</h1>
+                    <p>100.00</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+            <script>   
+            let item = document.querySelectorAll('.fooditem');
+            console.log(item);
+            item.forEach(ite=>ite.addEventListener("dragstart", drag));
+           
+            function drag(){
+                
+                console.log("drag started ");
+            }
+            let x = document.querySelectorAll('.booktable');
+            console.log(x);
+            x.forEach(ite=>ite.addEventListener("drop", drop));
+
+            function drop(ev){
+                ev.preventDefault();
+                console.log("dropped");
+            }
+            </script>
+</body>
+
+</html>

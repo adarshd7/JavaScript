@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restuarant</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+
+<body>
+    <div class='Table'>
+        <h2>Tables</h2>
+        <input class='searchTable' type='text' placeholder="Search table">
+
+    </div>
+    <div class="Menu">
+        <h2>Menu</h2>
+        <input id='searchItem' type='text' placeholder="Search menu.,by course,by food" name='targetItem'>
+    </div>
+    <div class="popcontent">
+        <div class="header">
+            <h3>Order Details<button id="closebtn">x</button></h3>
+        </div>
+        <div class="orderDetails">
+            <table>
+                <thead>
+                    <tr>
+                        <th>S.No</th>
+                        <th>Item</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        
+                    </tr>
+                </thead>
+                <tbody class="ordertable"></tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="4" id='total'>Total:</td>
+                        <td ><button class="generateBill"  >GENERATE BILL</button></td>
+                    </tr>
+                </tfoot>
+            </table>
+           
+        </div>
+
+        <div class="popcontent1">
+            <div class="header ">
+                <h3>Bill Details<button id="closebtn1">x</button></h3>
+            </div>
+            <div class="orderDetails1">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>S.No</th>
+                            <th>Item</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody class="ordertable1"></tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="5" id='total1'>Total:</td>
+                        </tr>
+                    </tfoot>
+                </table>
+               
+            </div>
+       
+    </div>
+
+</body>
+    <script  src="menu.js"></script>
+    <script  src="table.js"></script>
+    <script  src="main.js"></script>
+    <script  src="main1.js"></script>
+
+</html>
